@@ -1,12 +1,14 @@
 package br.edu.utfpr.trucoplay
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() { /* class */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,7 +21,10 @@ class MainActivity : AppCompatActivity() {
     } /* override */
 
     fun btComeceJogarOnClick(view: View) {
-
+        val intent = Intent(this, MarcacaoActivity::class.java)
+        startActivity(intent)
     } /* fun */
 
-} /* class */
+    fun btMaisUmOnClick(view: View) {}
+
+}
