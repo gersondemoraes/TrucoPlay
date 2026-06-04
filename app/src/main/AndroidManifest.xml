@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrucoPlay">
         <activity
+            android:name=".NomesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoricoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MarcacaoActivity"
             android:exported="false" />
         <activity
