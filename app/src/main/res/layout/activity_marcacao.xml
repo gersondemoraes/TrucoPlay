@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -12,13 +11,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
 
         <TextView
             android:id="@+id/tvJogador1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="JOGADOR 1:"
+            android:text="@string/Jogador1"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -26,10 +26,13 @@
             android:id="@+id/etJogador1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="NOME DO JOGADOR"
-            android:textSize="24dp"
-            android:gravity="left"
-            android:inputType="textPersonName" />
+            android:gravity="start"
+            android:hint="@string/nomeJogador1"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="24sp"
+            tools:ignore="Autofill" />
     </LinearLayout>
 
     <TextView
@@ -37,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="0"
+        android:text="@string/valorZero"
         android:textSize="48sp"
         android:textStyle="bold" />
 
@@ -45,39 +48,42 @@
         android:id="@+id/layoutBtJogadorUm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisUmOnClick"
-            android:text="+1" />
+            android:text="@string/um"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisTresOnClick"
-            android:text="+3" />
+            tools:ignore="RtlHardcoded"
+            android:text="@string/tres" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisSeisOnClick"
-            android:text="+6" />
+            android:text="@string/seis" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisDozeOnClick"
-            android:text="+12" />
+            tools:ignore="RtlHardcoded"
+            android:text="@string/doze" />
 
     </LinearLayout>
 
@@ -88,13 +94,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
 
         <TextView
             android:id="@+id/tvJogador2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="JOGADOR 2:"
+            android:text="@string/Jogador2"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -102,10 +109,13 @@
             android:id="@+id/etJogador2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="NOME DO JOGADOR"
-            android:textSize="24dp"
-            android:gravity="left"
-            android:inputType="textPersonName" />
+            android:gravity="start"
+            android:hint="@string/nomeJogador2"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="24sp"
+            tools:ignore="Autofill" />
     </LinearLayout>
 
     <TextView
@@ -113,46 +123,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="0"
+        android:text="@string/valorZero"
         android:textSize="48sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="ButtonStyle">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisUmJogador2OnClick"
-            android:text="+1" />
+            android:text="@string/um" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisTresJogador2OnClick"
-            android:text="+3" />
+            android:text="@string/tres" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisSeisJogador2OnClick"
-            android:text="+6" />
+            android:text="@string/seis" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_margin="2dp"
+            android:layout_weight="1"
             android:onClick="btMaisDozeJogador2OnClick"
-            android:text="+12" />
+            android:text="@string/doze" />
 
     </LinearLayout>
 
@@ -164,7 +175,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="ButtonStyle">
 
         <Button
             android:id="@+id/btHistorico"
@@ -172,23 +184,23 @@
             android:layout_height="wrap_content"
             android:onClick="btHistoricoOnClick"
             android:padding="16dp"
-            android:text="Histórico Jogadas" />
+            android:text="@string/historicoJogadas" />
 
         <Button
             android:id="@+id/btZerar"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-
             android:onClick="btZerarOnClick"
-            android:text="Zerar Placar" />
+
+            android:padding="16dp"
+            android:text="@string/zerarPlacar" />
 
         <Button
             android:id="@+id/btInformar"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:padding="16dp"
             android:onClick="btInformarNomes"
-            android:text="Informar Nomes" />
+            android:padding="16dp"
+            android:text="@string/informarNomes" />
     </LinearLayout>
 </LinearLayout>

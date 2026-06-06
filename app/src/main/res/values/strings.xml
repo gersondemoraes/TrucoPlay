@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">TrucoPlay</string>
+    <string name="Jogador1">JOGADOR 1</string>
+    <string name="Jogador2">JOGADOR 2</string>
+    <string name="historicoJogadas">Histórico Jogadas</string>
+    <string name="zerarPlacar">Zerar Placar</string>
+    <string name="informarNomes">Informar Nomes</string>
+    <string name="nomeJogador1">Nome do Jogador 1</string>
+    <string name="nomeJogador2">Nome do Jogador 2</string>
+    <string name="identificacaoJogadores">Identificação dos Jogadores</string>
+    <string name="confirmar">CONFIRMAR</string>
+    <string name="voltar">VOLTAR</string>
+    <string name="valorZero">0</string>
+    <string name="comecarJogo">Começe a jogar</string>
+    <string name="um">+1</string>
+    <string name="tres">+3</string>
+    <string name="seis">+6</string>
+    <string name="doze">+12</string>
+
+
 </resources>
