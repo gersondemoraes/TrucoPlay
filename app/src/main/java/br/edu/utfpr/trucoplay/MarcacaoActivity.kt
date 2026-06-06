@@ -41,9 +41,15 @@ class MarcacaoActivity : AppCompatActivity() {
             val nome2 = data?.getStringExtra("NOME_JOGADOR_2")
 
             // Se o nome não estiver vazio, preenche o campo do Jogador 1 em letras maiúsculas
-            if (!nome1.isNullOrEmpty()) etJogador1.setText(nome1.uppercase())
+            if (!nome1.isNullOrEmpty()) {
+                etJogador1.setText(nome1.uppercase())
+                etJogador1.error = null // Limpa o erro ao receber um nome
+            }
             // Se o nome não estiver vazio, preenche o campo do Jogador 2 em letras maiúsculas
-            if (!nome2.isNullOrEmpty()) etJogador2.setText(nome2.uppercase())
+            if (!nome2.isNullOrEmpty()) {
+                etJogador2.setText(nome2.uppercase())
+                etJogador2.error = null // Limpa o erro ao receber um nome
+            }
         }
     }
 
@@ -131,53 +137,95 @@ class MarcacaoActivity : AppCompatActivity() {
     // Método disparado ao clicar no botão "+1" do Jogador 1
     fun btMaisUmOnClick(view: View) {
         placar1 += 1 // Aumenta 1 ponto
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão "+3" do Jogador 1
     fun btMaisTresOnClick(view: View) {
         placar1 += 3 // Aumenta 3 pontos
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão "+6" do Jogador 1
     fun btMaisSeisOnClick(view: View) {
         placar1 += 6 // Aumenta 6 pontos
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão "+12" do Jogador 1
     fun btMaisDozeOnClick(view: View) {
         placar1 += 12 // Aumenta 12 pontos (vitória instantânea)
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão "+1" do Jogador 2
     fun btMaisUmJogador2OnClick(view: View) {
         placar2 += 1 // Aumenta 1 ponto
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão "+3" do Jogador 2
     fun btMaisTresJogador2OnClick(view: View) {
         placar2 += 3 // Aumenta 3 pontos
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão "+6" do Jogador 2
     fun btMaisSeisJogador2OnClick(view: View) {
         placar2 += 6 // Aumenta 6 pontos
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão "+12" do Jogador 2
     fun btMaisDozeJogador2OnClick(view: View) {
         placar2 += 12 // Aumenta 12 pontos (vitória instantânea)
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
     }
 
     // Método disparado ao clicar no botão de Histórico
     fun btHistoricoOnClick(view: View) {
+        // Valida se os nomes foram preenchidos
+        if (etJogador1.text.toString().trim().isEmpty()) {
+            etJogador1.error = "Nome do jogador deve ser preenchido"
+            return
+        }
+        if (etJogador2.text.toString().trim().isEmpty()) {
+            etJogador2.error = "Nome do jogador deve ser preenchido"
+            return
+        }
+
         // Cria um objeto Intent para navegar até a HistoricoActivity
         val intent = Intent(this, HistoricoActivity::class.java)
         // Adiciona o nome do Jogador 1 para ser exibido no histórico

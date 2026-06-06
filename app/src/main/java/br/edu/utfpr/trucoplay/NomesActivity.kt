@@ -42,6 +42,16 @@ class NomesActivity : AppCompatActivity() {
 
     // Método acionado pelo clique no botão "Confirmar"
     fun btConfirmarOnClick(view: View) {
+        // Valida se os campos estão vazios
+        if (etPlayerOne.text.toString().trim().isEmpty()) {
+            etPlayerOne.error = "Nome do jogador deve ser preenchido"
+            return
+        }
+        if (etPlayerTwo.text.toString().trim().isEmpty()) {
+            etPlayerTwo.error = "Nome do jogador deve ser preenchido"
+            return
+        }
+
         // Cria uma Intent vazia para carregar os dados de retorno
         val intent = Intent()
         // Adiciona o texto digitado no campo do Jogador 1 à Intent
