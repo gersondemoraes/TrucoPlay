@@ -1,206 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="32dp"
+    android:fillViewport="true"
     tools:context=".MarcacaoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="ButtonStyle">
-
-        <TextView
-            android:id="@+id/tvJogador1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Jogador1"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etJogador1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:hint="@string/nomeJogador1"
-            android:inputType="textPersonName"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textSize="24sp"
-            tools:ignore="Autofill" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvPlacar1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/valorZero"
-        android:textSize="48sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:id="@+id/layoutBtJogadorUm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="ButtonStyle">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisUmOnClick"
-            android:text="@string/um"/>
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisTresOnClick"
-            tools:ignore="RtlHardcoded"
-            android:text="@string/tres" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisSeisOnClick"
-            android:text="@string/seis" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisDozeOnClick"
-            tools:ignore="RtlHardcoded"
-            android:text="@string/doze" />
-
-    </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="48dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="ButtonStyle">
-
-        <TextView
-            android:id="@+id/tvJogador2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Jogador2"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etJogador2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:hint="@string/nomeJogador2"
-            android:inputType="textPersonName"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textSize="24sp"
-            tools:ignore="Autofill" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/tvPlacar2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/valorZero"
-        android:textSize="48sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="ButtonStyle">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisUmJogador2OnClick"
-            android:text="@string/um" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisTresJogador2OnClick"
-            android:text="@string/tres" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisSeisJogador2OnClick"
-            android:text="@string/seis" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            android:layout_weight="1"
-            android:onClick="btMaisDozeJogador2OnClick"
-            android:text="@string/doze" />
-
-    </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="48dp" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:orientation="vertical"
-        tools:ignore="ButtonStyle">
+        android:padding="32dp">
 
-        <Button
-            android:id="@+id/btHistorico"
-            android:layout_width="180dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="btHistoricoOnClick"
-            android:padding="16dp"
-            android:text="@string/historicoJogadas" />
+            android:orientation="horizontal"
+            tools:ignore="ButtonStyle">
 
-        <Button
-            android:id="@+id/btZerar"
-            android:layout_width="180dp"
+            <TextView
+                android:id="@+id/tvJogador1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Jogador1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etJogador1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/nomeJogador1"
+                android:inputType="textPersonName"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="24sp"
+                tools:ignore="Autofill" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPlacar1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="btZerarOnClick"
+            android:gravity="center"
+            android:text="@string/valorZero"
+            android:textSize="48sp"
+            android:textStyle="bold" />
 
-            android:padding="16dp"
-            android:text="@string/zerarPlacar" />
-
-        <Button
-            android:id="@+id/btInformar"
-            android:layout_width="180dp"
+        <LinearLayout
+            android:id="@+id/layoutBtJogadorUm"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="btInformarNomes"
-            android:padding="16dp"
-            android:text="@string/informarNomes" />
+            android:orientation="horizontal"
+            tools:ignore="ButtonStyle">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisUmOnClick"
+                android:text="@string/um" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisTresOnClick"
+                android:text="@string/tres"
+                tools:ignore="RtlHardcoded" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisSeisOnClick"
+                android:text="@string/seis" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisDozeOnClick"
+                android:text="@string/doze"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="ButtonStyle">
+
+            <TextView
+                android:id="@+id/tvJogador2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Jogador2"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etJogador2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:hint="@string/nomeJogador2"
+                android:inputType="textPersonName"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="24sp"
+                tools:ignore="Autofill" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPlacar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/valorZero"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="ButtonStyle">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisUmJogador2OnClick"
+                android:text="@string/um" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisTresJogador2OnClick"
+                android:text="@string/tres" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisSeisJogador2OnClick"
+                android:text="@string/seis" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:onClick="btMaisDozeJogador2OnClick"
+                android:text="@string/doze" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            tools:ignore="ButtonStyle">
+
+            <Button
+                android:id="@+id/btHistorico"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:onClick="btHistoricoOnClick"
+                android:padding="16dp"
+                android:text="@string/historicoJogadas" />
+
+            <Button
+                android:id="@+id/btZerar"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:onClick="btZerarOnClick"
+                android:padding="16dp"
+                android:text="@string/zerarPlacar" />
+
+            <Button
+                android:id="@+id/btInformar"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:onClick="btInformarNomes"
+                android:padding="16dp"
+                android:text="@string/informarNomes" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

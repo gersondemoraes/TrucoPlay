@@ -1,60 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="top"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:fillViewport="true"
     tools:context=".NomesActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="@string/identificacaoJogadores"
-        android:textSize="24sp"
-        android:padding="18dp"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Jogador1"
-        android:textSize="16sp" />
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/etPlayerOne"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="name"
-        android:hint="@string/nomeJogador1"
-        android:inputType="textPersonName" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:padding="18dp"
+            android:text="@string/identificacaoJogadores"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/Jogador2"
-        android:textSize="16sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Jogador1"
+            android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/etPlayerTwo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="name"
-        android:hint="@string/nomeJogador2"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/etPlayerOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="@string/nomeJogador1"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btnConfirmar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="btConfirmarOnClick"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp"
-        android:text="@string/confirmar" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/Jogador2"
+            android:textSize="16sp" />
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/etPlayerTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:hint="@string/nomeJogador2"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:onClick="btConfirmarOnClick"
+            android:text="@string/confirmar" />
+
+    </LinearLayout>
+</ScrollView>
