@@ -73,8 +73,26 @@ class MarcacaoActivity : AppCompatActivity() {
         tvPlacar1 = findViewById(R.id.tvPlacar1)
         tvPlacar2 = findViewById(R.id.tvPlacar2)
 
-        // Chama a função para exibir os valores iniciais (zero) no placar
+        // Restaura o estado salvo se a atividade foi recriada (ex: rotação de tela)
+        if (savedInstanceState != null) {
+            placar1 = savedInstanceState.getInt("placar1")
+            placar2 = savedInstanceState.getInt("placar2")
+            vitorias1 = savedInstanceState.getInt("vitorias1")
+            vitorias2 = savedInstanceState.getInt("vitorias2")
+        }
+
+        // Chama a função para exibir os valores atuais no placar
         atualizarPlacar()
+    }
+
+    // Método chamado automaticamente pelo sistema para salvar o estado da tela
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Salva as variáveis de pontuação e vitórias no pacote (Bundle)
+        outState.putInt("placar1", placar1)
+        outState.putInt("placar2", placar2)
+        outState.putInt("vitorias1", vitorias1)
+        outState.putInt("vitorias2", vitorias2)
     }
 
     // Função interna que atualiza os textos dos placares na tela e verifica condições de vitória
