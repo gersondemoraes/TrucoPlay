@@ -153,6 +153,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+1" do Jogador 1
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisUmOnClick(view: View) {
         placar1 += 1 // Aumenta 1 ponto
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -163,6 +164,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+3" do Jogador 1
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisTresOnClick(view: View) {
         placar1 += 3 // Aumenta 3 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -173,6 +175,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+6" do Jogador 1
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisSeisOnClick(view: View) {
         placar1 += 6 // Aumenta 6 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -183,6 +186,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+12" do Jogador 1
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisDozeOnClick(view: View) {
         placar1 += 12 // Aumenta 12 pontos (vitória instantânea)
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -193,6 +197,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+1" do Jogador 2
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisUmJogador2OnClick(view: View) {
         placar2 += 1 // Aumenta 1 ponto
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -203,6 +208,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+3" do Jogador 2
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisTresJogador2OnClick(view: View) {
         placar2 += 3 // Aumenta 3 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -213,6 +219,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+6" do Jogador 2
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisSeisJogador2OnClick(view: View) {
         placar2 += 6 // Aumenta 6 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -223,6 +230,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão "+12" do Jogador 2
+    @Suppress("UNUSED_PARAMETER")
     fun btMaisDozeJogador2OnClick(view: View) {
         placar2 += 12 // Aumenta 12 pontos (vitória instantânea)
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -233,6 +241,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão de Histórico
+    @Suppress("UNUSED_PARAMETER")
     fun btHistoricoOnClick(view: View) {
         // Valida se os nomes foram preenchidos
         if (etJogador1.text.toString().trim().isEmpty()) {
@@ -259,6 +268,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão de Zerar Placar
+    @Suppress("UNUSED_PARAMETER")
     fun btZerarOnClick(view: View) {
         placar1 = 0 // Reinicia pontos da rodada do J1
         placar2 = 0 // Reinicia pontos da rodada do J2
@@ -268,6 +278,7 @@ class MarcacaoActivity : AppCompatActivity() {
     }
 
     // Método disparado ao clicar no botão de Informar Nomes
+    @Suppress("UNUSED_PARAMETER")
     fun btInformarNomes(view: View) {
         // Cria a Intent para abrir a tela de entrada de nomes
         val intent = Intent(this, NomesActivity::class.java)

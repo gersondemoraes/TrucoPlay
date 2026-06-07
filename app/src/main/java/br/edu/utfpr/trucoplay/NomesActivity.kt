@@ -41,6 +41,7 @@ class NomesActivity : AppCompatActivity() {
     }
 
     // Método acionado pelo clique no botão "Confirmar"
+    @Suppress("UNUSED_PARAMETER")
     fun btConfirmarOnClick(view: View) {
         // Valida se os campos estão vazios
         if (etPlayerOne.text.toString().trim().isEmpty()) {
