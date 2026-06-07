@@ -89,7 +89,7 @@ class MarcacaoActivity : AppCompatActivity() {
             // Incrementa o contador de vitórias totais do Jogador 1
             vitorias1++
             // Pega o nome digitado ou usa "Jogador 1" como padrão para o anúncio de vitória
-            val nomeVencedor = etJogador1.text.toString().ifEmpty { "Jogador 1" }
+            val nomeVencedor = etJogador1.text.toString().ifEmpty { getString(R.string.Jogador1) }
             // Exibe o pop-up parabenizando o vencedor
             mostrarPopupVitoria(nomeVencedor)
             // Reseta o placar da rodada atual para ambos os jogadores
@@ -104,7 +104,7 @@ class MarcacaoActivity : AppCompatActivity() {
             // Incrementa o contador de vitórias totais do Jogador 2
             vitorias2++
             // Pega o nome digitado ou usa "Jogador 2" como padrão para o anúncio de vitória
-            val nomeVencedor = etJogador2.text.toString().ifEmpty { "Jogador 2" }
+            val nomeVencedor = etJogador2.text.toString().ifEmpty { getString(R.string.Jogador2) }
             // Exibe o pop-up parabenizando o vencedor
             mostrarPopupVitoria(nomeVencedor)
             // Reseta o placar da rodada atual para ambos os jogadores
@@ -121,9 +121,9 @@ class MarcacaoActivity : AppCompatActivity() {
         // Construtor do AlertDialog vinculado ao contexto desta tela
         val builder = AlertDialog.Builder(this)
         // Define o título da caixa de diálogo
-        builder.setTitle("Fim da Partida")
+        builder.setTitle(getString(R.string.fim_da_partida))
         // Define a mensagem central com o nome do vencedor
-        builder.setMessage("$nome venceu!")
+        builder.setMessage(getString(R.string.venceu, nome))
         // Define o botão de confirmação que fecha o pop-up ao ser clicado
         builder.setPositiveButton("OK") { dialog, _ ->
             dialog.dismiss()
@@ -138,7 +138,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisUmOnClick(view: View) {
         placar1 += 1 // Aumenta 1 ponto
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -148,7 +148,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisTresOnClick(view: View) {
         placar1 += 3 // Aumenta 3 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -158,7 +158,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisSeisOnClick(view: View) {
         placar1 += 6 // Aumenta 6 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -168,7 +168,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisDozeOnClick(view: View) {
         placar1 += 12 // Aumenta 12 pontos (vitória instantânea)
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -178,7 +178,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisUmJogador2OnClick(view: View) {
         placar2 += 1 // Aumenta 1 ponto
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -188,7 +188,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisTresJogador2OnClick(view: View) {
         placar2 += 3 // Aumenta 3 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -198,7 +198,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisSeisJogador2OnClick(view: View) {
         placar2 += 6 // Aumenta 6 pontos
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -208,7 +208,7 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btMaisDozeJogador2OnClick(view: View) {
         placar2 += 12 // Aumenta 12 pontos (vitória instantânea)
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         atualizarPlacar() // Reflete a mudança na tela e checa vitória
@@ -218,11 +218,11 @@ class MarcacaoActivity : AppCompatActivity() {
     fun btHistoricoOnClick(view: View) {
         // Valida se os nomes foram preenchidos
         if (etJogador1.text.toString().trim().isEmpty()) {
-            etJogador1.error = "Nome do jogador deve ser preenchido"
+            etJogador1.error = getString(R.string.erro_nome_vazio)
             return
         }
         if (etJogador2.text.toString().trim().isEmpty()) {
-            etJogador2.error = "Nome do jogador deve ser preenchido"
+            etJogador2.error = getString(R.string.erro_nome_vazio)
             return
         }
 

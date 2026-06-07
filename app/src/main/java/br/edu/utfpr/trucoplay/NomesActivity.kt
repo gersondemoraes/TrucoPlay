@@ -44,11 +44,11 @@ class NomesActivity : AppCompatActivity() {
     fun btConfirmarOnClick(view: View) {
         // Valida se os campos estão vazios
         if (etPlayerOne.text.toString().trim().isEmpty()) {
-            etPlayerOne.error = "Nome do jogador deve ser preenchido"
+            etPlayerOne.error = getString(R.string.erro_nome_vazio)
             return
         }
         if (etPlayerTwo.text.toString().trim().isEmpty()) {
-            etPlayerTwo.error = "Nome do jogador deve ser preenchido"
+            etPlayerTwo.error = getString(R.string.erro_nome_vazio)
             return
         }
 

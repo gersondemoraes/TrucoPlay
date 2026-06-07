@@ -16,6 +16,7 @@
     <string name="tres">+3</string>
     <string name="seis">+6</string>
     <string name="doze">+12</string>
-
-
+    <string name="erro_nome_vazio">Nome do jogador deve ser preenchido</string>
+    <string name="fim_da_partida">Fim da Partida</string>
+    <string name="venceu">%1$s venceu!</string>
 </resources>
